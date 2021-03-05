@@ -1,0 +1,26 @@
+Fazer login na AWS
+    Localizar o serviço 'EC2'
+        Criar nova instância 'Launch instances'
+            Selecionar 'Ubuntu Server 20.04 LTS' em uma máquina t2.micro (free tear)
+            Criar e salvar chave SSH .pem
+            'Review and Launch' / 'Launch'
+            Ao voltar para a lista de instâncias, renomear para algo legível. Ex. 'Avanços Aleatórios'
+            Em 'Security' / 'Security Groups' liberar as portas 22 (ssh) e 80 (http)
+            'Save Rules'
+
+No vscode local instalar as extenções 'Remote-SSH'
+    Seguir passos de configuração: https://medium.com/@christyjacob4/using-vscode-remotely-on-an-ec2-instance-7822c4032cff
+
+Após conectado pelo vscode via ssh, trocar a senha do usuário ubuntu:
+    'sudo passwd ubuntu'
+
+Instalar as extenções no vscode para a maquina EC2:
+    'Live Share'
+    'Live Share Audio'
+    'Live Share Extension Pack'
+
+clonar repositorio git:
+    git clone git@github.com:fagianijunior/avancos_aleatorios.git
+
+iniciar servidor http:
+    sudo python3 -m http.server 80
